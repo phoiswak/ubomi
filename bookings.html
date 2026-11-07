@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book or enquire | uBöMi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Enquire about a treatment or a table at uBöMi. Whether you’re taking a moment for yourself, meeting a friend, or marking a special occasion.">
+<meta property="og:title" content="Book or enquire | uBöMi">
+<meta property="og:description" content="Enquire about a day spa treatment or a table at the tapas bar.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.webp">
+<meta name="theme-color" content="#53593A">
+<link rel="icon" href="img/favicon.png?v=clear" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=clear">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="uBöMi Day Spa and Tapas Bar, home"><img src="img/logo-dark.png?v=clear" alt="uBöMi Day Spa &amp; Tapas Bar" width="110" height="46"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="about.html">About</a><a href="day-spa.html">Day Spa</a><a href="tapas-bar.html">Tapas Bar</a><a href="menu.html">Menu</a><a href="skincare.html">Skincare</a><a href="contact.html">Contact</a><a class="btn" href="bookings.html" aria-current="page">Book now</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero page-hero--text">
+  <div class="wrap"><div class="page-hero__copy">
+    <p class="kicker">Day spa &amp; tapas bar</p>
+    <h1>Book or enquire</h1>
+    <p class="lede">Whether you’re taking a moment for yourself, meeting a friend, or marking a special occasion, uBöMi is your go-to destination.</p>
+  </div></div>
+</section>
+
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="book-slide">
+    <form class="formcard book-slide__form" id="booking-form" data-enquiry data-subject="uBöMi booking enquiry" novalidate>
+      <div class="book-types">
+        <input id="type-spa" type="radio" name="type" value="spa" checked>
+        <input id="type-tapas" type="radio" name="type" value="tapas">
+      </div>
+      <p class="kicker">I would like to book</p>
+      <h2 class="book-heading book-heading--spa">A spa treatment</h2>
+      <h2 class="book-heading book-heading--table">A table</h2>
+      <div class="fields">
+        <div class="field field--full"><label for="service">Service</label><select id="service" name="service" required></select><span class="err" id="service-err" aria-live="polite"></span></div>
+        <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" required><span class="err" id="date-err" aria-live="polite"></span></div>
+        <div class="field"><label for="time">Preferred time</label><input id="time" name="time" type="time"></div>
+        <div class="field" id="guests-field"><label for="guests">Number of people</label><input id="guests" name="guests" type="number" min="1" max="20" value="1"></div>
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required><span class="err" id="name-err" aria-live="polite"></span></div>
+        <div class="field"><label for="phone">Phone or WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" required><span class="err" id="phone-err" aria-live="polite"></span></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+        <div class="field field--full"><label for="notes">Notes</label><textarea id="notes" name="notes"></textarea></div>
+      </div>
+      <div class="form-actions">
+        <button class="btn" type="submit">Prepare my enquiry</button>
+        <p class="small">This is an enquiry, not a confirmed booking.</p>
+      </div>
+      <div class="result" hidden></div>
+    </form>
+    <div class="book-slide__mask">
+      <div class="book-slide__overlay">
+        <div class="book-slide__panel book-slide__panel--spa">
+          <p class="kicker">I would like to book</p>
+          <h2>A spa treatment</h2>
+          <label class="ghost" for="type-spa">A spa treatment</label>
+        </div>
+        <div class="book-slide__panel book-slide__panel--table">
+          <p class="kicker">I would like to book</p>
+          <h2>A table</h2>
+          <label class="ghost" for="type-tapas">A table</label>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="opts-spa" hidden>
+      <optgroup label="The Spa"><option value="Relaxation packages">Relaxation packages</option><option value="Body care">Body care</option><option value="Massages">Massages</option></optgroup>
+      <optgroup label="Nail Bar"><option value="Manicures">Manicures</option><option value="Pedicures">Pedicures</option></optgroup>
+      <optgroup label="Self care"><option value="Waxing">Waxing</option><option value="Brows">Brows</option><option value="Lashes">Lashes</option></optgroup>
+      <optgroup label="The Salon"><option value="Hair treatments">Hair treatments</option><option value="Braids">Braids</option><option value="Installs">Installs</option><option value="Barber">Barber</option></optgroup>
+    </div>
+    <div id="opts-tapas" hidden>
+      <option value="Brunch">Brunch</option>
+      <option value="Starters and lunch">Starters and lunch</option>
+      <option value="Something sweet and drinks">Something sweet and drinks</option>
+      <option value="Drinks only">Drinks only</option>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="img/logo-light.png" alt="uBöMi Day Spa &amp; Tapas Bar" width="153" height="64">
+        <p>Wellness. Flavour. Connection.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="day-spa.html">Day spa</a></li>
+          <li><a href="tapas-bar.html">Tapas bar</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="skincare.html">Skincare</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <ul>
+          <li data-cfg="address">Street address, Suburb, City</li>
+          <li>Brunch 10:00–12:30</li>
+          <li>Lunch til late</li>
+          <li data-cfg="hours">Opening hours to be confirmed</li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a data-href="tel" href="#"><span data-cfg="phoneDisplay">+27 00 000 0000</span></a></li>
+          <li><a data-href="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a data-href="instagram" href="#" target="_blank" rel="noopener"><span data-cfg="instagramHandle">@ubomidayspa</span></a></li>
+          <li><a href="bookings.html">Book or enquire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>&copy; 2026 uBöMi Day Spa &amp; Tapas Bar. All rights reserved.</span><span>Website by MARS ICT Solutions</span></div>
+  </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
