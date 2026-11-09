@@ -287,8 +287,8 @@ p { margin: 0; }
 .moments a:last-child { border-right: 0; }
 .moments a:hover { background: transparent; }
 .moments p { font-size: 1rem; }
-.band:has(.moments) { padding-bottom: clamp(12px, 1.5vw, 20px); }
-.band:has(.moments) + .band { padding-top: clamp(12px, 1.5vw, 20px); }
+.band:has(.moments) { padding-bottom: 0; }
+.band:has(.moments) + .band { padding-top: 0; }
 @media (max-width: 960px) {
   .moments { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .moments a { border-bottom: 1px solid var(--line); padding-left: 0; }
