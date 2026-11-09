@@ -210,6 +210,13 @@ p { margin: 0; }
 .intro { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 6vw, 96px); align-items: start; }
 .intro h2 { max-width: 14em; }
 .intro p + p { margin-top: 1.15rem; }
+.band--copy { padding-block: clamp(72px, 8vw, 112px); }
+.copy-note { display: flex; flex-direction: column; gap: 1.35rem; padding-block: 0.35rem; }
+.copy-note p + p { margin-top: 0; }
+.indent { margin-left: 1.75rem; }
+#sweet .mcard__inner,
+#drinks .mcard__inner { padding: clamp(40px, 5vw, 72px); }
+#drinks .mcard__tag { margin: 2rem 0 0; align-self: center; }
 @media (max-width: 860px) { .intro { grid-template-columns: minmax(0, 1fr); } }
 
 .offer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(36px, 5vw, 80px); }

@@ -15,6 +15,7 @@
     if (kind === "whatsapp") href = "https://wa.me/" + (cfg.whatsapp || "");
     if (kind === "mail") href = "mailto:" + (cfg.email || "");
     if (kind === "instagram") href = cfg.instagramUrl || "#";
+    if (kind === "facebook") href = cfg.facebookUrl || "#";
     if (kind === "map") href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((cfg.mapQuery || "") + " " + (cfg.address || ""));
     if (href) el.setAttribute("href", href);
   });
