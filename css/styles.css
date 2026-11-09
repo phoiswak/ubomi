@@ -18,7 +18,7 @@
   --gutter: clamp(20px, 5.5vw, 72px);
   --section: clamp(96px, 12vw, 164px);
   --max: 1120px;
-  --header-h: 84px;
+  --header-h: 96px;
   color-scheme: light;
 }
 
@@ -129,8 +129,8 @@ p { margin: 0; }
   background: var(--ivory); border-bottom: 1px solid var(--line);
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: var(--header-h); }
-.brand { display: block; line-height: 0; }
-.brand img { height: 48px; width: auto; }
+.brand { display: flex; align-items: center; flex: 0 0 auto; line-height: 0; padding-block: 10px; }
+.brand img { height: 64px; width: auto; max-width: none; max-height: none; object-fit: contain; object-position: center; }
 .nav { display: flex; align-items: center; gap: clamp(0.9rem, 2vw, 1.8rem); }
 .nav a:not(.btn) {
   font: 500 0.75rem/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase;
