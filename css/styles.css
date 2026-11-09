@@ -221,8 +221,8 @@ p { margin: 0; }
 .intro { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 6vw, 96px); align-items: start; }
 .intro h2 { max-width: 14em; }
 .intro p + p { margin-top: 1.15rem; }
-.intro--calm { grid-template-columns: max-content minmax(0, 36rem); gap: clamp(28px, 4vw, 56px); justify-content: start; }
-.intro--calm h2 { max-width: none; }
+.intro--calm { display: flex; flex-direction: column; align-items: stretch; width: 100%; gap: 1.35rem; }
+.intro--calm h2, .intro--calm > div { width: 100%; max-width: none; }
 .band--copy { padding-block: clamp(72px, 8vw, 112px); }
 .copy-note { display: flex; flex-direction: column; gap: 1.35rem; padding-block: 0.35rem; }
 .copy-note p + p { margin-top: 0; }
