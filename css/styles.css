@@ -18,7 +18,7 @@
   --gutter: clamp(20px, 5.5vw, 72px);
   --section: clamp(96px, 12vw, 164px);
   --max: 1120px;
-  --header-h: 96px;
+  --header-h: 112px;
   color-scheme: light;
 }
 
@@ -127,10 +127,21 @@ p { margin: 0; }
 .site-header {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
   background: var(--ivory); border-bottom: 1px solid var(--line);
+  overflow: visible;
 }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: var(--header-h); }
-.brand { display: flex; align-items: center; flex: 0 0 auto; line-height: 0; padding-block: 10px; }
-.brand img { height: 64px; width: auto; max-width: none; max-height: none; object-fit: contain; object-position: center; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: var(--header-h); overflow: visible; }
+.brand { display: flex; align-items: center; flex: 0 0 auto; line-height: 0; padding-block: 12px; overflow: visible; }
+.brand img {
+  display: block;
+  height: 78px;
+  width: auto;
+  aspect-ratio: 332 / 335;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  overflow: visible;
+}
 .nav { display: flex; align-items: center; gap: clamp(0.9rem, 2vw, 1.8rem); }
 .nav a:not(.btn) {
   font: 500 0.75rem/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase;
