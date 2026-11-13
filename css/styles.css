@@ -669,7 +669,8 @@ p { margin: 0; }
 .mcard--cornerphoto .mcard__tag { align-self: flex-end; margin: 1.75rem 0 -4rem; position: relative; z-index: 3; }
 
 /* green version */
-.menu-stage[data-style="green"] .mcard {
+.menu-stage .confirm { margin: clamp(28px, 4vw, 44px) auto 0; max-width: 40em; text-align: center; }
+.menu-stage .actions { justify-content: center; margin-top: 1.25rem; }
   --m-ink: var(--on-dark); --m-soft: #d9d3bd; --m-line: rgba(244, 240, 225, 0.24); --m-accent: var(--tan);
   background: radial-gradient(120% 75% at 22% 0%, #566040 0%, #434a2e 55%, #363c25 100%);
   box-shadow: 0 34px 60px -34px rgba(20, 24, 10, 0.7);
