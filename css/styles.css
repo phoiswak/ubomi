@@ -196,6 +196,14 @@ p { margin: 0; }
 .intro h2 { max-width: 14em; }
 .intro p + p { margin-top: 1.1rem; }
 @media (max-width: 860px) { .intro { grid-template-columns: minmax(0, 1fr); } }
+.close-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 6vw, 96px); align-items: start; }
+.close-row h2 { max-width: 8em; }
+.close-row__copy { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+.close-row .actions { flex-wrap: nowrap; }
+@media (max-width: 860px) {
+  .close-row { grid-template-columns: minmax(0, 1fr); }
+  .close-row .actions { flex-wrap: wrap; }
+}
 
 /* two offerings */
 .offer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 56px); }
