@@ -8,7 +8,7 @@ window.UBOMI_CONFIG = {
   instagramHandle: "@ubomidayspa",
   facebookUrl: "https://www.facebook.com/share/19rTJ2Wmjx/",
   address: "Street address, Suburb, City",
-  hours: "Opening hours to be confirmed",
+  hours: "8am–8pm",
   mapQuery: "uBöMi Day Spa & Tapas Bar",   // used for the Google Maps link
   mapEmbedUrl: "",                    // paste the Google Maps "Embed a map" src URL here to show a live map
   formEndpoint: ""                    // optional: a Formspree/EmailJS-style URL that accepts a JSON POST
