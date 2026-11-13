@@ -509,7 +509,18 @@ p { margin: 0; }
   mask-image: linear-gradient(180deg, transparent 0, #000 40%), linear-gradient(90deg, #000 68%, transparent 100%);
   -webkit-mask-composite: source-in; mask-composite: intersect;
 }
-.mcard--cornerphoto .mcard__tag { align-self: flex-end; margin: 1.75rem 0 -4rem; position: relative; z-index: 3; }
+.mcard--cornerphoto .mcard__tag { align-self: flex-end; margin: 1.75rem 0 0.75rem; position: relative; z-index: 3; }
+.mcard__foot {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 48px);
+  padding: 0 clamp(22px, 5vw, 64px) clamp(28px, 4vw, 48px) 0;
+  position: relative;
+  z-index: 2;
+}
+.mcard__foot .mcard__photo { width: 100%; margin: 0; }
+.mcard__foot .actions { margin: 0; }
 
 /* green version */
 .menu-stage[data-style="green"] .mcard {
@@ -525,8 +536,10 @@ p { margin: 0; }
 @media (max-width: 860px) { .mcols--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mcard::after { background-size: 62% auto; } }
 @media (max-width: 560px) {
   .mcols--3 { grid-template-columns: minmax(0, 1fr); }
-  .mcard--cornerphoto .mcard__photo { width: 80%; }
-  .mcard--cornerphoto .mcard__tag { margin: 1rem 0; align-self: center; }
+  .mcard--cornerphoto .mcard__photo { width: 100%; }
+  .mcard--cornerphoto .mcard__tag { margin: 1rem 0 0.5rem; align-self: center; }
+  .mcard__foot { grid-template-columns: minmax(0, 1fr); padding-left: clamp(22px, 5vw, 64px); }
+  .mcard__foot .actions { justify-content: center; }
 }
 
 /* ---------- day spa page ---------- */
