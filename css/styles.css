@@ -276,7 +276,8 @@ p { margin: 0; }
 .group__head { display: flex; flex-direction: column; gap: 0.7rem; align-self: start; position: sticky; top: calc(var(--header-h) + 24px + env(safe-area-inset-top, 0px)); }
 .group__head p { max-width: 18em; }
 .group__body { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 36px); }
-.group__photo { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+.group__photo { width: min(100%, 15rem); aspect-ratio: 1; object-fit: cover; object-position: center 40%; display: block; }
+.group__body .group__photo { object-position: center 72%; }
 .group__head:has(.group__photo) { position: static; }
 .svc { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .svc li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.35rem 1.5rem; padding-block: 1.15rem; border-top: 1px solid var(--line); align-items: baseline; }
