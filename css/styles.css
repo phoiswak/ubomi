@@ -289,7 +289,7 @@ p { margin: 0; }
 }
 
 .moments { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-.moments a { text-decoration: none; padding: 1.6rem 1.4rem 2rem 0; display: flex; flex-direction: column; gap: 0.55rem; border-right: 1px solid var(--line); padding-left: 1.4rem; }
+.moments a { text-decoration: none; padding: 1.6rem 2rem 2rem 0; display: flex; flex-direction: column; gap: 0.55rem; border-right: 1px solid var(--line); padding-left: 2rem; }
 .moments a:first-child { padding-left: 0; }
 .moments a:last-child { border-right: 0; }
 .moments a:hover { background: transparent; }
@@ -299,7 +299,7 @@ p { margin: 0; }
 @media (max-width: 960px) {
   .moments { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .moments a { border-bottom: 1px solid var(--line); padding-left: 0; }
-  .moments a:nth-child(2n) { border-right: 0; padding-left: 1.4rem; }
+  .moments a:nth-child(2n) { border-right: 0; padding-left: 2rem; }
 }
 @media (max-width: 520px) {
   .moments { grid-template-columns: minmax(0, 1fr); }
