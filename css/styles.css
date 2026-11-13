@@ -224,7 +224,6 @@ p { margin: 0; }
 .intro p + p { margin-top: 1.15rem; }
 .intro--calm { display: flex; flex-direction: column; align-items: stretch; width: 100%; gap: 1.35rem; }
 .intro--calm h2, .intro--calm > div { width: 100%; max-width: none; }
-.intro--calm > .measure { max-width: 34em; }
 .intro--center { text-align: center; }
 .intro--center .lede { margin-inline: auto; }
 .intro--center .actions { justify-content: center; }
