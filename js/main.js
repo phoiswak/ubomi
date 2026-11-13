@@ -15,7 +15,6 @@
     if (kind === "whatsapp") href = "https://wa.me/" + (cfg.whatsapp || "");
     if (kind === "mail") href = "mailto:" + (cfg.email || "");
     if (kind === "instagram") href = cfg.instagramUrl || "#";
-    if (kind === "facebook") href = cfg.facebookUrl || "#";
     if (kind === "map") href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((cfg.mapQuery || "") + " " + (cfg.address || ""));
     if (href) el.setAttribute("href", href);
   });
@@ -64,6 +63,24 @@
     };
     window.addEventListener("hashchange", show);
     show();
+  }
+
+
+  /* ---- menu card style (light or green), remembered per visit ---- */
+  var stage = document.querySelector(".menu-stage");
+  if (stage) {
+    var radios = stage.querySelectorAll('input[name="mstyle"]');
+    var setStyle = function (v) {
+      stage.setAttribute("data-style", v);
+      Array.prototype.forEach.call(radios, function (r) { r.checked = r.value === v; });
+    };
+    try { var saved = sessionStorage.getItem("ubomi-menu-style"); if (saved) setStyle(saved); } catch (e) {}
+    Array.prototype.forEach.call(radios, function (r) {
+      r.addEventListener("change", function () {
+        setStyle(r.value);
+        try { sessionStorage.setItem("ubomi-menu-style", r.value); } catch (e) {}
+      });
+    });
   }
 
   /* ---- enquiry forms ---- */
