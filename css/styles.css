@@ -94,6 +94,7 @@ p { margin: 0; }
 }
 .band { padding-block: var(--section); }
 .band--tight { padding-top: 0; }
+.band--close { padding-top: clamp(48px, 5vw, 72px); }
 .band--sand, .band--paper { background: var(--ivory); }
 .band--dark, .dark { background: var(--green); color: var(--on-dark); }
 .band--dark .lede, .dark .lede, .band--dark p, .dark p { color: var(--on-dark-soft); }
@@ -223,6 +224,9 @@ p { margin: 0; }
 .intro p + p { margin-top: 1.15rem; }
 .intro--calm { display: flex; flex-direction: column; align-items: stretch; width: 100%; gap: 1.35rem; }
 .intro--calm h2, .intro--calm > div { width: 100%; max-width: none; }
+.intro--center { text-align: center; }
+.intro--center .lede { margin-inline: auto; }
+.intro--center .actions { justify-content: center; }
 .band--copy { padding-block: clamp(72px, 8vw, 112px); }
 .copy-note { display: flex; flex-direction: column; gap: 1.35rem; padding-block: 0.35rem; }
 .copy-note p + p { margin-top: 0; }
