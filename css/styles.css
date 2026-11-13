@@ -550,7 +550,15 @@ p { margin: 0; }
 .skin3 img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
 .skin3 figure { margin: 0; }
 @media (max-width: 760px) { .skin3 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; padding-bottom: 12px; } .skin3 figure { flex: 0 0 72%; scroll-snap-align: start; } }
-.page-hero__media img.tall { aspect-ratio: 4 / 5; object-position: 50% 40%; }
+.page-hero:has(img.tall) .wrap { align-items: center; }
+.page-hero__media:has(img.tall) { display: flex; justify-content: flex-end; }
+.page-hero__media img.tall { width: auto; max-width: 100%; max-height: min(72vh, 720px); height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; }
+.skin-range .stack { gap: clamp(28px, 4vw, 48px); }
+.skin-range .skin3 { margin-top: clamp(8px, 1.5vw, 16px); }
+.range > li, .skin3 > figure { min-width: 0; }
+.skin3 img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; object-position: center top; }
+.spa-hero__grid > *, .coll__grid > *, .salon__grid > * { min-width: 0; }
+.coll__main, .spa-hero__main, .mosaic img { max-width: 100%; }
 
 /* menu panels with photography */
 .panel__layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
@@ -671,6 +679,7 @@ p { margin: 0; }
 /* green version */
 .menu-stage .confirm { margin: clamp(28px, 4vw, 44px) auto 0; max-width: 40em; text-align: center; }
 .menu-stage .actions { justify-content: center; margin-top: 1.25rem; }
+.menu-stage[data-style="green"] .mcard {
   --m-ink: var(--on-dark); --m-soft: #d9d3bd; --m-line: rgba(244, 240, 225, 0.24); --m-accent: var(--tan);
   background: radial-gradient(120% 75% at 22% 0%, #566040 0%, #434a2e 55%, #363c25 100%);
   box-shadow: 0 34px 60px -34px rgba(20, 24, 10, 0.7);
