@@ -6,6 +6,7 @@ window.UBOMI_CONFIG = {
   email: "hello@example.com",
   instagramUrl: "https://www.instagram.com/ubomidayspa/",
   instagramHandle: "@ubomidayspa",
+  facebookUrl: "https://www.facebook.com/share/19rTJ2Wmjx/",
   address: "Street address, Suburb, City",
   hours: "Opening hours to be confirmed",
   mapQuery: "uBöMi Day Spa & Tapas Bar",   // used for the Google Maps link
