@@ -152,19 +152,18 @@ p { margin: 0; }
 }
 
 /* hero */
-.hero { background: var(--espresso); color: var(--on-dark); overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 0; min-height: min(760px, 86vh); }
-.hero__copy { display: flex; flex-direction: column; gap: 1.75rem; padding-block: clamp(56px, 8vw, 110px); position: relative; z-index: 2; max-width: 31rem; }
-.hero__copy .lede { color: var(--on-dark-soft); font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
-.hero__media {
-  position: relative; align-self: stretch; margin-right: calc(-1 * max(var(--gutter), env(safe-area-inset-right, 0px)));
-  display: flex; align-items: center;
-}
-.hero__media img { width: 100%; height: 100%; max-height: 780px; object-fit: cover; object-position: 50% 50%; }
+.hero { position: relative; background: #1c1a16; color: var(--on-dark); overflow: hidden; min-height: min(760px, 86vh); }
+.hero .wrap { position: static; display: flex; align-items: center; min-height: min(760px, 86vh); }
+.hero__copy { display: flex; flex-direction: column; gap: 1.5rem; padding-block: clamp(56px, 8vw, 110px); position: relative; z-index: 1; max-width: 28rem; }
+.hero__copy .kicker { font: 500 0.78rem/1 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--tan); }
+.hero__copy .kicker, .hero__copy h1, .hero__copy .lede { text-shadow: 0 0 1px rgba(20, 16, 10, 0.95), 0 1px 2px rgba(20, 16, 10, 0.9), 0 8px 22px rgba(20, 16, 10, 0.72); }
+.hero__copy .lede { color: var(--on-dark); font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
+.hero .btn--ghost { background: rgba(28, 26, 22, 0.45); color: var(--on-dark); border-color: var(--on-dark); }
+.hero__media { position: absolute; inset: 0; margin: 0; z-index: 0; }
+.hero__media img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: 50% 55%; }
 @media (max-width: 860px) {
-  .hero .wrap { grid-template-columns: minmax(0, 1fr); min-height: 0; }
-  .hero__media { order: -1; margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); height: 340px; }
-  .hero__copy { padding-top: 8px; padding-bottom: 64px; }
+  .hero, .hero .wrap { min-height: min(640px, 92vh); }
+  .hero__copy { max-width: none; padding-top: 72px; padding-bottom: 64px; }
 }
 
 /* load-in: one orchestrated moment, resting state is fully visible */
