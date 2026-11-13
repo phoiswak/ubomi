@@ -79,6 +79,8 @@ p { margin: 0; }
   padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
 }
 .band { padding-block: var(--section); }
+.band:has(+ .band--close) { padding-bottom: clamp(24px, 3vw, 40px); }
+.band--close { padding-top: clamp(32px, 4vw, 56px); }
 .band--sand { background: var(--sand); }
 .band--paper { background: var(--paper); }
 .band--dark, .dark { background: var(--espresso); color: var(--on-dark); }
